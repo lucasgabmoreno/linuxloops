@@ -28,7 +28,7 @@ qemu-system-x86_64 -drive file=/test.img -m 8192 -enable-kvm -machine type=pc,ac
 
 From Windows: `C:\"Program Files"\Oracle\VirtualBox\VboxManage.exe internalcommands createrawvmdk -filename ubuntu.vmdk -rawdisk ubuntu.img`  
 
-From Linux: `vboxmanage internalcommands createrawvmdk -filename ubuntu.vmdk -rawdisk ubuntu.img`  
+From Linux: `VBoxManage convertdd ubuntu.img ubuntu.vmdk --format VMDK`  
 
 4. Open VirtualBox and setup a new virtual machine. When requested for the storage, select the vmdk file we have just created in the Linuxloops image folder.  
 
